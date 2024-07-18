@@ -130,11 +130,11 @@ setMoney(money + zombie.price);
     {team.map((teams, idx) => (
       <>
       <div key={idx}>
-      <li> {teams.name} </li>
-      <li> {teams.price} </li>
-      <li> {teams.strength} </li>
-      <li> {teams.agility} </li>
-      <li> {teams.img} </li>
+      <h4> {teams.name} </h4>
+      <li> Price: {teams.price} </li>
+      <li> Strenght: {teams.strength} </li>
+      <li> Agility: {teams.agility} </li>
+      <img src={teams.img} />
       <button onClick={() => handleRemoveTeam(teams, idx)}>Remove</button>
       </div>
       </>
@@ -144,13 +144,17 @@ setMoney(money + zombie.price);
     <ul>
     {zombieFighters.map((zombieFighters, idx) => (
       <>
-      <div key={idx}>
-      <li> {zombieFighters.name} </li>
-      <li> {zombieFighters.price} </li>
-      <li> {zombieFighters.strength} </li>
-      <li> {zombieFighters.agility} </li>
-      <li> {zombieFighters.img} </li>
+      <div id="container" key={idx}>
+      <h4> {zombieFighters.name} </h4>
+      <div id='stored'>
+      <span>Price: {zombieFighters.price} </span>
+      <span>Strenght {zombieFighters.strength} </span>
+      <span>Agility {zombieFighters.agility} </span>
+      <img src={zombieFighters.img} />
+      <hr />
+      </div>
       <button onClick={() => handleAddFighter(zombieFighters)}>Add</button>
+      
      </div>
       </>
     ))}
